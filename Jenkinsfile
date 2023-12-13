@@ -1,7 +1,7 @@
 node {
 
-   def registryProjet='ludo-app/'
-   def IMAGE="${registryProjet}app:${version}"
+   def registryProjet='luc-app/'
+   def IMAGE="${registryProjet}app:1.0"
 
     stage('Clone') {
           checkout scm
