@@ -2,7 +2,9 @@ node {
 
    // luc-app/ : nom du projet dans HARBOR
    def registryProjet='luc-app/'
-   def IMAGE="${registryProjet}app:1.0"
+
+   // ${version} : nom du parametre dans jenkins
+   def IMAGE="${registryProjet}app:${version}"
 
     stage('Clone') {
           checkout scm
