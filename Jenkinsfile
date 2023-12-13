@@ -1,5 +1,6 @@
 node {
 
+   // luc-app/ : nom du projet dans HARBOR
    def registryProjet='luc-app/'
    def IMAGE="${registryProjet}app:1.0"
 
@@ -18,6 +19,7 @@ node {
     }
 
     stage('Push') {
+       // harbor_id_luc : création d'un « credentials »
        docker.withRegistry('https://registry.ludovic.io/' , 'harbor_id_luc') {
               img.push 'latest'
               img.push()
